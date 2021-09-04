@@ -1,0 +1,61 @@
+.countdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1.5rem;
+  font-size: 4rem;
+  text-align: center;
+  margin: 1.5rem 1.5rem 0;
+}
+
+.goalDate {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.timeRemainingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.timeRemainingContainer div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.smallText {
+  font-size: 2rem;
+}
+
+.bigText {
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Azeret Mono', monospace;
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .timeRemainingContainer div {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .timeRemainingContainer div:nth-child(even) {
+    background-color: green;
+    opacity: .7;
+  }
+
+  .bigText {
+    z-index: 1;
+  }
+}
