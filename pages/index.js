@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.scss'
 import React from 'react'
+import Link from 'next/link'
 
 class Home extends React.Component {
     constructor() {
@@ -52,10 +53,12 @@ class Home extends React.Component {
     render() {
         return (
             <div className={styles.countdownContainer}>
+                {/* The current header and the goal date selected*/}
                 <h1 className={styles.header}>{this.state.currentHeader}</h1>
                 <p className={styles.goalDate}>{this.state.goalDate.toLocaleDateString('en-US')}</p>
-                <div className={styles.timeRemainingContainer}>
 
+                {/* Time remaining */}
+                <div className={styles.timeRemainingContainer}>
                     <div className={styles.dayContainer}>
                         <p className={styles.bigText}>{this.state.days < 10 ? `0${this.state.days}` : this.state.days}</p>
                         <p className={styles.smallText}>days</p>
@@ -72,7 +75,11 @@ class Home extends React.Component {
                         <p className={styles.bigText}>{this.state.seconds < 10 ? `0${this.state.seconds}` : this.state.seconds}</p>
                         <p className={styles.smallText}>seconds</p>
                     </div>
+                </div>
 
+                {/* Link to goal date change page */}
+                <div className={styles.changeGoalDateContainer}>
+                    <Link href="change-goal-date"><a className={styles.removeTextDecoration}>Change Goal Date</a></Link>
                 </div>
             </div>
         )
