@@ -48,9 +48,7 @@ class TimeRemaining extends React.Component {
         return (
             <div className={styles.timeRemainingContainer}>
                 <div className={styles.dayContainer}>
-                    {this.state.days ? <p className={styles.bigText}>00</p>
-                        : <p className={styles.bigText}>{this.state.days < 10 ? `0${this.state.days}` : this.state.days}</p>
-                    }
+                    <p className={styles.bigText}>{this.state.days < 10 ? `0${this.state.days}` : this.state.days}</p>
                     <p className={styles.smallText}>days</p>
                 </div>
 
