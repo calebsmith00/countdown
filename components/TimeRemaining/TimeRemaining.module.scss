@@ -23,3 +23,21 @@
     font-family: 'Azeret Mono', monospace;
     padding: 1.5rem;
   }
+
+  
+@media screen and (max-width: 768px) {
+    .timeRemainingContainer div {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+    }
+  
+    .timeRemainingContainer div:nth-child(even) {
+      background-color: green;
+      opacity: .7;
+    }
+  
+    .bigText {
+      z-index: 1;
+    }
+  }

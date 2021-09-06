@@ -33,7 +33,7 @@ class Home extends React.Component {
                 {/* The current header and the goal date selected*/}
                 <h1 className={styles.header}>{this.state.currentHeader}</h1>
 
-                <TimeRemaining goalDate={this.state.goalDate} />
+                <TimeRemaining />
 
                 {/* Link to goal date change page */}
                 <div className={styles.changeGoalDateContainer}>
