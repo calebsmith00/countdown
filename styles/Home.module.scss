@@ -43,6 +43,19 @@
   padding: 1.5rem;
 }
 
+.removeTextDecoration {
+  text-decoration: none;
+  color: white;
+}
+
+.changeGoalDateContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .timeRemainingContainer div {
     width: 100%;
