@@ -1,6 +1,7 @@
 import React from 'react'
 import Calendar from 'react-calendar'
 import styles from '../styles/GoalDate.module.scss'
+import 'react-calendar/dist/Calendar.css';
 
 class ChangeGoalDate extends React.Component {
     constructor() {
@@ -31,6 +32,9 @@ class ChangeGoalDate extends React.Component {
         e.preventDefault()
 
         if (this.state.goalDate) localStorage.setItem('goalDate', this.state.goalDate)
+        this.setState({
+            calendarVisible: false
+        })
     }
 
     render() {
