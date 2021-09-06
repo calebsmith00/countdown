@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.scss'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link'
 import TimeRemaining from '../components/TimeRemaining/TimeRemaining'
 
@@ -34,7 +34,6 @@ class Home extends React.Component {
                 <h1 className={styles.header}>{this.state.currentHeader}</h1>
 
                 <TimeRemaining />
-
                 {/* Link to goal date change page */}
                 <div className={styles.changeGoalDateContainer}>
                     <Link href="change-goal-date"><a className={styles.removeTextDecoration}>Change Goal Date</a></Link>

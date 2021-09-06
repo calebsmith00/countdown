@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Calendar from 'react-calendar'
 import styles from '../styles/GoalDate.module.scss'
 import 'react-calendar/dist/Calendar.css';
@@ -24,36 +25,25 @@ class ChangeGoalDate extends React.Component {
         event.preventDefault()
 
         this.setState({
+            calendarVisible: false,
             goalDate: value.toLocaleDateString('en-US')
         })
-    }
 
-    changeDate = e => {
-        e.preventDefault()
-
-        if (this.state.goalDate) localStorage.setItem('goalDate', this.state.goalDate)
-        this.setState({
-            calendarVisible: false
-        })
+        sessionStorage.setItem('goalDate', value.toLocaleDateString('en-US'))
     }
 
     render() {
         return (
             <div>
                 <h1>Change goal date</h1>
-
                 <div className={styles.dateInputContainer}>
-                    <input type="text" className={styles.dateInput} value={this.state.goalDate} />
-                    <button className={styles.changeDateBtn} onClick={this.changeDate}>Change Date</button>
-                    <div>
-                        <button onClick={this.onClick} className={styles.calendarBtn}>Calendar</button>
-                        <Calendar
-                            className={`${styles.calendarContainer} ${this.state.calendarVisible ? styles.visible : styles.hidden}`}
-                            // className={styles.calendarContainer, this.state.calendarVisible ? styles.visible : styles.hidden}
-                            onChange={this.onChange}
-                            value={new Date()}
-                        />
-                    </div>
+                    <Link href="/" passHref><button onClick={this.goBack}>Go Back</button></Link>
+                    <button onClick={this.onClick} className={styles.calendarBtn}>Calendar</button>
+                    <Calendar
+                        className={`${styles.calendarContainer} ${this.state.calendarVisible ? styles.visible : styles.hidden}`}
+                        onChange={this.onChange}
+                        value={new Date()}
+                    />
                 </div>
             </div>
         )
