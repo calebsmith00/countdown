@@ -36,7 +36,7 @@ class Home extends React.Component {
                 <TimeRemaining />
                 {/* Link to goal date change page */}
                 <div className={styles.changeGoalDateContainer}>
-                    <Link href="change-goal-date"><a className={styles.removeTextDecoration}>Change Goal Date</a></Link>
+                    <Link href="/change-goal-date"><a className={styles.removeTextDecoration}>Change Goal Date</a></Link>
                 </div>
             </div>
         )
