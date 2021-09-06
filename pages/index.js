@@ -19,6 +19,7 @@ class Home extends React.Component {
     componentDidMount() {
         this.grabHeaderMessage()
         this.calculateTime()
+        this.getGoalDate()
         this.interval = setInterval(this.calculateTime, 1000)
     }
 
@@ -47,6 +48,14 @@ class Home extends React.Component {
         let randomIndex = Math.floor(Math.random() * this.state.headerMessages.length)
         this.setState({
             currentHeader: this.state.headerMessages[randomIndex]
+        })
+    }
+
+    getGoalDate = () => {
+        let goalDate = localStorage.getItem('goalDate') || '1 Jan 2022'
+
+        this.setState({
+            goalDate: new Date(goalDate)
         })
     }
 
