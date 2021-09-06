@@ -24,6 +24,11 @@ class ChangeGoalDate extends React.Component {
     onChange = (value, event) => {
         event.preventDefault()
 
+        let currentDate = new Date()
+        if (value - currentDate < 0) return (
+            value = new Date(),
+            alert("You cannot select a date that's in the past!")
+        )
         this.setState({
             calendarVisible: false,
             goalDate: value.toLocaleDateString('en-US')
