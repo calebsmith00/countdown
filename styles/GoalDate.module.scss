@@ -3,9 +3,27 @@
     padding: 2rem;
 }
 
+.dateInputContainer button {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dateInput {
     margin: 0 1rem;
+    padding: .5rem;
     height: 1rem;
+    text-align: center;
+}
+
+.changeDateBtn {
+    height: 1.5rem;
+    margin: 0 1.5rem;
+}
+
+.calendarBtn {
+    height: 1.5rem;
 }
 
 .hidden {
@@ -19,4 +37,5 @@
 .calendarContainer {
     padding-top: 1rem;
     width: 40%;
+    max-width: 100%;
 }
