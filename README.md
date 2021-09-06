@@ -18,4 +18,4 @@ Open http://localhost:3000 with your browser to see the result.
 
 - Style the 'change goal date' page
 - Style the calendar
-- Look into asynchronous functionality as, when you first load the page, there is a slight hiccup until it shows you the proper countdown
+- ~~Look into asynchronous functionality as, when you first load the page, there is a slight hiccup until it shows you the proper countdown~~
