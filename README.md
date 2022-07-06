@@ -1,3 +1,7 @@
+# This project is abandoned 
+
+Bye bye 👋
+
 # Prerequisites
 
 To install/run this development server, you will need to install NodeJS LTS and you will need access to a command prompt or terminal.
